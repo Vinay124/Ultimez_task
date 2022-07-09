@@ -41,9 +41,10 @@ body{
 }
 
 .imgbox {
-    max-width: 35%;
+    max-width: 40%;
     display: grid;
     grid-template-columns: repeat(2,0fr);
+    grid-template-rows: 16rem;
     grid-gap: 30px;
     margin: 5rem ;
 }
@@ -141,4 +142,94 @@ footer {
 .s_icons li i:hover {
     color: #b9b9b9;
     transition: .3s ease-in-out;
+}
+
+
+/* responsive */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .imgbox {
+        grid-template-columns: repeat(1,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:15px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 296px;
+    }
+    .foo_add {
+        flex-direction: column;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
+    
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    .imgbox {
+        grid-template-columns: repeat(1,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:15px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 450px;
+    }
+    .foo_add {
+        flex-direction: column;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .imgbox {
+        grid-template-columns: repeat(2,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:15px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 350px;
+    }
+    .foo_add {
+        flex-direction: column;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .imgbox {
+        grid-template-columns: repeat(2,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:28px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 470px;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
 }
