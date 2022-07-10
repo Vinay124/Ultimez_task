@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --webkit-font-smoothing: antialiased;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background: #fff;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    margin-right: auto;
+    padding-left: 15px;
+    margin-left: auto;
+}
+@media(min-width:567px){
+    .container{
+    max-width: 540px;}
+}
+@media(min-width:768px){
+    .container{
+    max-width: 720px;}
+}
+@media(min-width:992px){
+    .container{
+    max-width: 920px;}
+}
+@media(min-width:1200px){
+    .container{
+    max-width: 1151px;}
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgbox {
+    max-width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2,0fr);
+    grid-template-rows: 16rem;
+    grid-gap: 30px;
+    margin: 5rem ;
+}
+
+.imgbox div img {
+    max-width: 380px;
+    border-radius: 5px;
+    transition: transform .2s;
+}
+
+.imgbox div img:hover {
+    transform: scale(1.1);
+    
+}
+
+.imgbox div img{
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+}
+
+.textbox h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+}
+
+.textbox h1::before {
+    position: absolute;
+    content: "";
+    background-color: #c90202;
+    width: 28%;
+    height: 4px;
+    border-radius: 20px;
+    bottom: 0;
+    top: 4rem;
+}
+
+.textbox p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: 1.8rem 0;
+    text-transform: capitalize;
+}
+
+.btn-primary {
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: "Nunito",sans-serif;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid rgba(236,236,242,.15);
+    background: #a80505;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background: #c90202;
+    transition: all .4s ease-in-out;
+}
+
+footer {
+    background: black;
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.foo_add {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foo_add div h4 i ,
+.foo_add div span i {
+    margin: 10px;
+}
+
+.copy {
+    margin: 0rem 0;
+    text-align: center;
+}
+
+.s_icons {
+    display: flex;
+    margin: 2.8rem 0;
+    justify-content: center;
+    list-style: none;
+}
+
+.s_icons li i {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: #fff;}
+.s_icons li i:hover {
+    color: #b9b9b9;
+    transition: .3s ease-in-out;
+}
+
+
+/* responsive */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .imgbox {
+        grid-template-columns: repeat(1,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:15px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 296px;
+    }
+    .foo_add {
+        flex-direction: column;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
+    
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    .imgbox {
+        grid-template-columns: repeat(1,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:15px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 450px;
+    }
+    .foo_add {
+        flex-direction: column;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .imgbox {
+        grid-template-columns: repeat(2,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:15px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 350px;
+    }
+    .foo_add {
+        flex-direction: column;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .wrapper{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .imgbox {
+        grid-template-columns: repeat(2,0fr);
+        max-width: 100%;
+        grid-template-rows:none; 
+        grid-gap:28px;
+        margin: 5rem 0;
+    }
+    .imgbox div img {
+        max-width: 470px;
+    }
+    .foo_add div {
+        margin: 2rem 0;
+    }
+}
